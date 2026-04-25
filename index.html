@@ -1,93 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Social Media Academy</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Social Media Academy</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<style>
+html { scroll-behavior: smooth; }
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #000;
-      color: white;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #000;
+  color: white;
+}
 
-    .glass {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
 
-    .neon {
-      background: #CCFF00;
-      color: black;
-      box-shadow: 0 0 20px #CCFF00;
-    }
+.neon {
+  background: #CCFF00;
+  color: black;
+  box-shadow: 0 0 25px #CCFF00;
+}
 
-    .neon-outline {
-      border: 1px solid #CCFF00;
-    }
-
-    .hover-glow:hover {
-      box-shadow: 0 0 25px #CCFF00;
-      transform: translateY(-3px);
-      transition: 0.3s;
-    }
-  </style>
+.hover-glow:hover {
+  box-shadow: 0 0 35px #CCFF00;
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+</style>
 </head>
 
 <body>
 
 <!-- NAV -->
-<nav class="flex justify-between items-center p-6">
-  <h1 class="text-xl font-bold">thesocialmediaacademy.in</h1>
+<nav class="fixed top-0 w-full bg-black/80 backdrop-blur z-50 flex justify-between items-center p-6">
+  <h1 class="font-bold">thesocialmediaacademy.in</h1>
   <div class="space-x-6 text-sm">
-    <a href="#">Why us</a>
-    <a href="#">What you'll learn</a>
-    <a href="#">Pricing</a>
-    <a href="#">Hire from us</a>
+    <a href="#why">Why us</a>
+    <a href="#learn">What you'll learn</a>
+    <a href="#pricing">Pricing</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="text-center py-24 px-6">
+<section class="text-center py-36 px-6">
   <h1 class="text-5xl font-extrabold mb-6">
     Build your dream.<br>Not someone else's.
   </h1>
 
   <p class="text-gray-400 max-w-xl mx-auto mb-10">
-    The ultimate beginner-friendly social media growth cohort, now powered with the most insane AI tools ever.
+    Learn how to grow, monetize and dominate social media using proven systems + AI workflows.
   </p>
 
-  <div class="w-64 h-64 mx-auto mb-10 rounded-full bg-gradient-to-br from-lime-300/30 to-transparent flex items-center justify-center shadow-2xl">
-    <span class="text-6xl">🚀</span>
-  </div>
-
-  <button class="neon px-8 py-3 rounded-full font-semibold hover-glow">
+  <button onclick="joinNow()" class="neon px-10 py-4 rounded-full font-semibold hover-glow">
     Join Now
   </button>
 </section>
 
-<!-- SOCIAL PROOF -->
-<section class="py-20 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-6">6 YEARS of experience in 3 months!</h2>
-  <p class="text-gray-400 mb-12">Revealing the powerful secrets to dominate the creative fields.</p>
+<!-- VALUE STRIP -->
+<section class="py-10 text-center border-t border-white/10 border-b border-white/10">
+  <p class="text-gray-400">
+    🚀 Grow your page • 💰 Get clients • 🤖 Use AI • 📈 Build income streams
+  </p>
+</section>
 
-  <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-    <div class="glass p-6 rounded-xl">📸<br>2.1M+ Reach</div>
-    <div class="glass p-6 rounded-xl">💼<br>LinkedIn Growth</div>
-    <div class="glass p-6 rounded-xl">🎥<br>YouTube Scaling</div>
+<!-- WHY -->
+<section id="why" class="py-20 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-6">6 YEARS of experience in 3 months</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-10">
+    <div class="glass p-6 rounded-xl">📸 2.1M+ Reach</div>
+    <div class="glass p-6 rounded-xl">💼 100+ Clients</div>
+    <div class="glass p-6 rounded-xl">🎥 Viral Systems</div>
+  </div>
+
+  <p class="text-gray-400 mt-10 max-w-xl mx-auto">
+    This isn’t theory. You’ll copy systems that already work.
+  </p>
+</section>
+
+<!-- WHO IS THIS FOR -->
+<section class="py-20 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-12">Who is this for?</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div class="glass p-6 rounded-xl">Creators who want to grow</div>
+    <div class="glass p-6 rounded-xl">Students who want income</div>
+    <div class="glass p-6 rounded-xl">Freelancers who want clients</div>
   </div>
 </section>
 
-<!-- CURRICULUM -->
-<section class="py-20 px-6">
+<!-- LEARN -->
+<section id="learn" class="py-20 px-6">
   <h2 class="text-3xl font-bold text-center mb-12">What You'll Learn</h2>
 
   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -95,14 +106,14 @@
     <div class="glass p-6 rounded-xl hover-glow">
       <h3 class="font-bold mb-3">Strategy</h3>
       <ul class="text-gray-400 text-sm space-y-2">
-        <li>• Content Planning</li>
-        <li>• Data Analytics</li>
-        <li>• Community Management</li>
+        <li>• Content frameworks</li>
+        <li>• Growth systems</li>
+        <li>• Analytics</li>
       </ul>
     </div>
 
     <div class="glass p-6 rounded-xl hover-glow">
-      <h3 class="font-bold mb-3">Platform Mastery</h3>
+      <h3 class="font-bold mb-3">Platforms</h3>
       <ul class="text-gray-400 text-sm space-y-2">
         <li>• Instagram</li>
         <li>• LinkedIn</li>
@@ -114,8 +125,8 @@
       <h3 class="font-bold mb-3">Branding</h3>
       <ul class="text-gray-400 text-sm space-y-2">
         <li>• Storytelling</li>
-        <li>• Scripting</li>
-        <li>• Niche Authority</li>
+        <li>• Authority</li>
+        <li>• Positioning</li>
       </ul>
     </div>
 
@@ -123,107 +134,83 @@
       <h3 class="font-bold mb-3">AI Studio</h3>
       <ul class="text-gray-400 text-sm space-y-2">
         <li>• Automation</li>
-        <li>• AI Tools</li>
-        <li>• Video + Design</li>
+        <li>• AI content</li>
+        <li>• Editing</li>
       </ul>
     </div>
 
   </div>
 </section>
 
-<!-- FLOW -->
+<!-- OUTCOME -->
 <section class="py-20 text-center">
-  <h2 class="text-3xl font-bold mb-10">The Flow</h2>
+  <h2 class="text-3xl font-bold mb-10">What you’ll achieve</h2>
 
-  <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-lg">
-    <span class="glass px-6 py-4 rounded-xl">Learn Skill</span>
-    <span>→</span>
-    <span class="glass px-6 py-4 rounded-xl">(Freelance / Placement / Growth)</span>
-    <span>→</span>
-    <span class="neon px-6 py-4 rounded-xl">Make Money</span>
+  <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div class="glass p-6 rounded-xl">📈 Grow your audience</div>
+    <div class="glass p-6 rounded-xl">💰 Get paying clients</div>
+    <div class="glass p-6 rounded-xl">🔥 Build a personal brand</div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section class="py-20 px-6">
-  <h2 class="text-3xl font-bold text-center mb-12">Success Stories</h2>
+  <h2 class="text-3xl font-bold text-center mb-12">Results</h2>
 
   <div class="grid md:grid-cols-3 gap-6">
-
-    <div class="glass p-6 rounded-xl">
-      <p>"0 to 50k followers in 3 months."</p>
-      <span class="text-sm text-gray-400">– Student A</span>
-    </div>
-
-    <div class="glass p-6 rounded-xl">
-      <p>"Landed ₹80k/month client."</p>
-      <span class="text-sm text-gray-400">– Student B</span>
-    </div>
-
-    <div class="glass p-6 rounded-xl">
-      <p>"Quit my job and went full-time."</p>
-      <span class="text-sm text-gray-400">– Student C</span>
-    </div>
-
+    <div class="glass p-6 rounded-xl">"0 → 50k followers"</div>
+    <div class="glass p-6 rounded-xl">"₹80k/month client"</div>
+    <div class="glass p-6 rounded-xl">"Full-time income"</div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section class="py-20 px-6 text-center">
+<section id="pricing" class="py-20 px-6 text-center">
   <h2 class="text-3xl font-bold mb-12">Pricing</h2>
 
   <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
     <div class="glass p-6 rounded-xl">
-      <h3 class="font-bold text-xl mb-4">Starter</h3>
-      <p class="mb-4">₹4,999</p>
-      <ul class="text-gray-400 text-sm space-y-2 mb-6">
-        <li>• Studio Lectures</li>
-        <li>• Weekly Live Classes</li>
-        <li>• Community Access</li>
-      </ul>
-      <button class="neon px-6 py-2 rounded-full">Join</button>
+      <h3 class="font-bold mb-2">Starter</h3>
+      <p class="text-2xl mb-4">₹4,999</p>
+      <button onclick="joinNow()" class="neon px-6 py-2 rounded-full">Join</button>
     </div>
 
     <div class="glass p-6 rounded-xl border border-lime-400 scale-105">
-      <h3 class="font-bold text-xl mb-4">Growth</h3>
-      <p class="mb-4">₹9,999</p>
-      <ul class="text-gray-400 text-sm space-y-2 mb-6">
-        <li>• Dedicated Mentors</li>
-        <li>• Masterclasses</li>
-        <li>• Asset Packs</li>
-      </ul>
-      <button class="neon px-6 py-2 rounded-full">Most Popular</button>
+      <h3 class="font-bold mb-2">Growth</h3>
+      <p class="text-2xl mb-4">₹9,999</p>
+      <button onclick="joinNow()" class="neon px-6 py-2 rounded-full">Most Popular</button>
     </div>
 
     <div class="glass p-6 rounded-xl">
-      <h3 class="font-bold text-xl mb-4">Professional</h3>
-      <p class="mb-4">₹19,999</p>
-      <ul class="text-gray-400 text-sm space-y-2 mb-6">
-        <li>• 1-on-1 Audits</li>
-        <li>• Manager</li>
-        <li>• Placement Leads</li>
-      </ul>
-      <button class="neon px-6 py-2 rounded-full">Join</button>
+      <h3 class="font-bold mb-2">Professional</h3>
+      <p class="text-2xl mb-4">₹19,999</p>
+      <button onclick="joinNow()" class="neon px-6 py-2 rounded-full">Join</button>
     </div>
 
   </div>
 </section>
 
+<!-- FINAL CTA -->
+<section class="text-center py-20">
+  <h2 class="text-3xl font-bold mb-6">Limited seats. Apply now.</h2>
+  <button onclick="joinNow()" class="neon px-10 py-4 rounded-full hover-glow">
+    Apply Now
+  </button>
+</section>
+
 <!-- FOOTER -->
-<footer class="py-10 text-center text-sm text-gray-400">
-  <p class="text-white font-bold mb-2">thesocialmediaacademy.in</p>
+<footer class="py-10 text-center text-gray-400">
+  <p class="text-white font-bold">thesocialmediaacademy.in</p>
   <p class="mb-4">Build your dream. Not someone else's.</p>
-
-  <div class="space-x-4 mb-6">
-    <a href="#">Home</a>
-    <a href="#">Hire from us</a>
-    <a href="#">404</a>
-    <a href="#">Privacy</a>
-  </div>
-
   <p class="text-lime-400 font-semibold">Made by Abhishek Nair</p>
 </footer>
+
+<script>
+function joinNow() {
+  window.open("https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform?usp=header", "_blank");
+}
+</script>
 
 </body>
 </html>
